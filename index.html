@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Çilek Nail House Studio – Tırnak & Güzellik Salonu</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <style>
+    body { font-family: 'Jost', sans-serif; }
+    h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+
+    :root {
+      --rose:    #7D062C;
+      --blush:   #f5ece8;
+      --dark:    #2c2c2c;
+      --muted:   #8a7a7a;
+      --cream:   #fdf8f5;
+    }
+
+    .hero-section {
+      background-image:
+        linear-gradient(rgba(245, 236, 232, 0.82), rgba(245, 236, 232, 0.88)),
+        url('images/salon.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // rose:  '#c9a4a4',
+            rose:  '#7D062C',
+            blush: '#f5ece8',
+            dark:  '#2c2c2c',
+            muted: '#8a7a7a',
+            cream: '#fdf8f5',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'serif'],
+            sans:  ['Jost', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-cream text-dark">
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-cream/90 backdrop-blur-sm border-b border-rose/20">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="font-serif text-2xl tracking-widest text-dark">Çilek Nail House</span>
+      <div class="hidden md:flex gap-8 text-sm tracking-widest text-muted uppercase">
+        <a href="#gallery"  class="hover:text-rose transition">Galeri</a>
+        <a href="#services" class="hover:text-rose transition">Hizmetler</a>
+        <a href="#yorumlar"    class="hover:text-rose transition">Yorumlar</a>
+        <a href="#contact"  class="hover:text-rose transition">İletişim</a>
+      </div>
+      <a href="https://wa.me/908503468705" target="_blank"
+         class="text-sm tracking-widest uppercase border border-rose text-rose px-4 py-2 hover:bg-rose hover:text-white transition">
+        Randevu Al
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ════════════════════════════════════════ -->
+  <section class="hero-section min-h-screen flex items-center justify-center pt-24">
+  <div class="text-center px-6 max-w-2xl">
+    <p class="text-xs tracking-[0.4em] uppercase text-rose mb-6">Tırnak & Güzellik Stüdyosu</p>
+    <h1 class="text-6xl md:text-8xl font-serif font-light text-dark leading-tight mb-6">
+      Çilek Nail House
+    </h1>
+    <p class="text-muted text-lg font-light mb-6 leading-relaxed">
+      Protez Tırnak &bull; Nail Art &bull; Güzellik
+    </p>
+
+    <!-- Location + branch badges -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      <span class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-rose/20 text-dark text-xs tracking-widest px-4 py-2 rounded-full">
+        📍 Nişantaşı, Şişli
+      </span>
+      <span class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-rose/20 text-dark text-xs tracking-widest px-4 py-2 rounded-full">
+        📍 Osmanbey, Şişli
+      </span>
+      <span class="inline-flex items-center gap-2 bg-rose/10 border border-rose/30 text-rose text-xs tracking-widest px-4 py-2 rounded-full">
+        ⭐ 4.6 · 1.057 Yorum
+      </span>
+      <span class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-rose/20 text-dark text-xs tracking-widest px-4 py-2 rounded-full">
+        🕐 Her gün 09:30 – 23:00
+      </span>
+      <span class="inline-flex items-center gap-2 bg-white/70 backdrop-blur-sm border border-rose/20 text-dark text-xs tracking-widest px-4 py-2 rounded-full">
+        👩‍💼 20+ Uzman Kadro
+      </span>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="https://wa.me/908503468705" target="_blank"
+         class="bg-rose text-white px-8 py-3 text-sm tracking-widest uppercase hover:bg-dark transition">
+        WhatsApp ile Randevu Al
+      </a>
+      <a href="#services"
+         class="border border-dark text-dark px-8 py-3 text-sm tracking-widest uppercase hover:bg-dark hover:text-white transition">
+        Hizmetlerimiz
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════════════════════════════
+       GALLERY
+  ════════════════════════════════════════ -->
+  <section id="gallery" class="py-24 bg-blush">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.4em] uppercase text-rose mb-3">Çalışmalarımız</p>
+        <h2 class="text-5xl font-serif font-light">Galeri</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <img src="images/p1.png" alt="Mavi puantiyeli ve 3D karakter tasarımlı özel tırnak sanatı" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p2.png" alt="Salon tırnak ve güzellik çalışması" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p3.png" alt="Kalp detaylı kırmızı manikür ve pedikür" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p4.png" alt="Profesyonel kirpik uzatma ve kaş şekillendirme" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p5.png" alt="Hacimli kirpik uzatma yakın çekim" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p6.png" alt="3D kedi temalı özel tırnak sanatı" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p7.png" alt="Salon tırnak ve güzellik çalışması" class="aspect-square object-cover w-full" loading="lazy" />
+        <img src="images/p8.png" alt="Mavi ombre French uç manikür" class="aspect-square object-cover w-full" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════ -->
+  <section id="services" class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.4em] uppercase text-rose mb-3">Sunduklarımız</p>
+        <h2 class="text-5xl font-serif font-light">Hizmetlerimiz</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1: Tırnak -->
+        <div class="bg-blush p-8 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-rose shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-2.082-1.664-4.125-2.572-5.285a1.125 1.125 0 0 1 .21-.969l2.301-2.302a1.125 1.125 0 0 1 1.591 0l1.061 1.06a1.125 1.125 0 0 1 0 1.591l-2.302 2.302a1.125 1.125 0 0 1-.969.21Z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-serif">Tırnak Hizmetleri</h3>
+          </div>
+          <p class="text-muted text-sm mb-5 leading-relaxed">
+            Protez tırnak, jel, kalıcı oje ve özel tırnak tasarımları.
+          </p>
+
+          <!-- Toggle button -->
+          <button
+            onclick="toggleService('tirnak')"
+            class="text-xs tracking-widest uppercase text-rose border border-rose/40 px-4 py-2 hover:bg-rose hover:text-white transition w-full mb-4">
+            Tüm Hizmetleri Gör
+          </button>
+
+          <!-- Expandable list -->
+          <ul id="tirnak" class="hidden flex flex-col divide-y divide-rose/10 text-sm">
+            <li class="flex justify-between py-2"><span>Manikür</span><span class="text-rose">350 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Spa Manikür</span><span class="text-rose">550 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Pedikür</span><span class="text-rose">—</span></li>
+            <li class="flex justify-between py-2"><span>Spa Pedikür</span><span class="text-rose">700 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Medikal Pedikür</span><span class="text-rose">550 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Kalıcı Oje + Manikür</span><span class="text-rose">750 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Jel Bakım + Manikür</span><span class="text-rose">850 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Jel Güçlendirme + Manikür</span><span class="text-rose">850 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Protez Tırnak + Manikür</span><span class="text-rose">950 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Protez Tırnak (Şablon)</span><span class="text-rose">1.100 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Islak Pedikür + Kalıcı Oje</span><span class="text-rose">1.100 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Islak Pedikür + 10 Parmak Protez</span><span class="text-rose">1.800 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Tek Tırnak Tamir</span><span class="text-rose">50 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Kalıcı Oje Çıkarma</span><span class="text-rose">250 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Protez Tırnak Çıkarma</span><span class="text-rose">300 ₺</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Kirpik & Kaş -->
+        <div class="bg-blush p-8 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-rose shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-serif">Kirpik & Kaş</h3>
+          </div>
+          <p class="text-muted text-sm mb-5 leading-relaxed">
+            İpek kirpik, lifting, kaş laminasyonu ve altın oran kaş tasarımı.
+          </p>
+
+          <button
+            onclick="toggleService('kirpik')"
+            class="text-xs tracking-widest uppercase text-rose border border-rose/40 px-4 py-2 hover:bg-rose hover:text-white transition w-full mb-4">
+            Tüm Hizmetleri Gör
+          </button>
+
+          <ul id="kirpik" class="hidden flex flex-col divide-y divide-rose/10 text-sm">
+            <li class="flex justify-between py-2"><span>İpek Kirpik</span><span class="text-rose">1.000 ₺</span></li>
+            <li class="flex justify-between py-2"><span>3D İpek Kirpik</span><span class="text-rose">1.300 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Kirpik Lifting</span><span class="text-rose">950 ₺</span></li>
+            <li class="flex justify-between py-2"><span>İpek Kirpik Çıkarma</span><span class="text-rose">300 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Kaş Laminasyonu</span><span class="text-rose">1.500 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Altın Oran Kaş Alımı</span><span class="text-rose">600 ₺</span></li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Cilt & Masaj -->
+        <div class="bg-blush p-8 hover:shadow-md transition">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-rose shrink-0" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+              </svg>
+            </div>
+            <h3 class="text-2xl font-serif">Cilt & Masaj</h3>
+          </div>
+          <p class="text-muted text-sm mb-5 leading-relaxed">
+            Cilt bakımı, G5 masajı, sırt bakımı ve kafa masajı ile kendinizi yenileyin.
+          </p>
+
+          <button
+            onclick="toggleService('cilt')"
+            class="text-xs tracking-widest uppercase text-rose border border-rose/40 px-4 py-2 hover:bg-rose hover:text-white transition w-full mb-4">
+            Tüm Hizmetleri Gör
+          </button>
+
+          <ul id="cilt" class="hidden flex flex-col divide-y divide-rose/10 text-sm">
+            <li class="flex justify-between py-2"><span>Cilt Bakımı</span><span class="text-rose">2.000 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Sırt Bakımı</span><span class="text-rose">1.800 ₺</span></li>
+            <li class="flex justify-between py-2"><span>G5 Masajı</span><span class="text-rose">1.000 – 8.000 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Kafa Masajı</span><span class="text-rose">1.200 ₺</span></li>
+            <li class="flex justify-between py-2"><span>Kafa Masajı + Mini Cilt Bakımı</span><span class="text-rose">2.200 ₺</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════ -->
+<section id="neden-biz" class="py-24 bg-blush">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: big statement -->
+      <div>
+        <p class="text-xs tracking-[0.4em] uppercase text-rose mb-4">Neden Bizi Seçmelisiniz?</p>
+        <h2 class="text-5xl md:text-6xl font-serif font-light leading-tight">
+          Güzelliğiniz için<br/>profesyonel<br/>çözümler.
+        </h2>
+      </div>
+
+      <!-- Right: 2x2 grid -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3">
+          <div class="text-rose" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 0 1-7.531 0 3.375 3.375 0 0 1 7.531 0Zm7.5 0a3.375 3.375 0 0 1-7.531 0 3.375 3.375 0 0 1 7.531 0Z" />
+            </svg>
+          </div>
+          <h4 class="font-serif text-xl">20+ Uzman Kadro</h4>
+          <p class="text-muted text-sm leading-relaxed">Nişantaşı ve Osmanbey şubelerimizde deneyimli uzman ekibimiz.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3">
+          <div class="text-rose" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.563.563 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+            </svg>
+          </div>
+          <h4 class="font-serif text-xl">1.057 Mutlu Müşteri</h4>
+          <p class="text-muted text-sm leading-relaxed">4.6/5 puanla İstanbul'un en çok tercih edilen güzellik stüdyolarından.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3">
+          <div class="text-rose" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+          </div>
+          <h4 class="font-serif text-xl">Sıcak Atmosfer</h4>
+          <p class="text-muted text-sm leading-relaxed">Kendinizi evinizde gibi hissedeceğiniz, samimi ve özenli bir ortam.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3">
+          <div class="text-rose" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </div>
+          <h4 class="font-serif text-xl">Her Gün Açık</h4>
+          <p class="text-muted text-sm leading-relaxed">Haftanın 7 günü 09:30–23:00 arası randevu alabilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════ -->
+<section id="yorumlar" class="py-24 bg-cream">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-xs tracking-[0.4em] uppercase text-rose mb-3">Müşteri Yorumları</p>
+      <h2 class="text-5xl font-serif font-light">Onlar Ne Dedi?</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="bg-blush rounded-2xl p-6 flex flex-col gap-4">
+        <div class="text-rose text-lg tracking-widest">★★★★★</div>
+        <p class="text-dark text-sm leading-relaxed italic">
+          "Bayıldım! Tam istediğim gibi oldu. Hem çok özenli çalışıldı hem de sonuç harika. İlginiz ve emeğiniz için çok teşekkür ederim."
+        </p>
+        <div class="flex items-center gap-3 mt-2">
+          <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-serif text-sm">E</div>
+          <div>
+            <p class="text-sm font-medium text-dark">Esra Ç.</p>
+            <p class="text-xs text-muted">Haziran 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blush rounded-2xl p-6 flex flex-col gap-4">
+        <div class="text-rose text-lg tracking-widest">★★★★★</div>
+        <p class="text-dark text-sm leading-relaxed italic">
+          "Şebnem hanım o kadar müthiş ki hem çok tatlı biri hem de el işçiliği MÜKEMMEL. Tırnaklarım o kadar doğal ve zarif duruyor ki bayıldım."
+        </p>
+        <div class="flex items-center gap-3 mt-2">
+          <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-serif text-sm">N</div>
+          <div>
+            <p class="text-sm font-medium text-dark">Nehir R.</p>
+            <p class="text-xs text-muted">Haziran 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blush rounded-2xl p-6 flex flex-col gap-4">
+        <div class="text-rose text-lg tracking-widest">★★★★★</div>
+        <p class="text-dark text-sm leading-relaxed italic">
+          "O kadar memnun kaldım ki, Yasemin hanım gerçekten çok güleryüzlü ve ilgili. Tekrar tekrar gideceğim bir yer gerçekten."
+        </p>
+        <div class="flex items-center gap-3 mt-2">
+          <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-serif text-sm">Y</div>
+          <div>
+            <p class="text-sm font-medium text-dark">Yaren I.</p>
+            <p class="text-xs text-muted">Haziran 2026</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-blush rounded-2xl p-6 flex flex-col gap-4">
+        <div class="text-rose text-lg tracking-widest">★★★★★</div>
+        <p class="text-dark text-sm leading-relaxed italic">
+          "Osmanbey şubesinde Ceren Hanım tırnaklarımı yaptı. Çok memnun kaldım, çok da hızlıydı. Kesinlikle tavsiye ederim."
+        </p>
+        <div class="flex items-center gap-3 mt-2">
+          <div class="w-9 h-9 rounded-full bg-rose/20 flex items-center justify-center text-rose font-serif text-sm">C</div>
+          <div>
+            <p class="text-sm font-medium text-dark">Cansu R.</p>
+            <p class="text-xs text-muted">Haziran 2026</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+      CONTACT + MAP
+  ════════════════════════════════════════ -->
+  <section id="contact" class="py-24 bg-blush">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.4em] uppercase text-rose mb-3">Bize Ulaşın</p>
+        <h2 class="text-5xl font-serif font-light">İletişim & Konum</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+        <!-- Contact info -->
+        <div class="bg-white rounded-2xl p-8 flex flex-col gap-5">
+          <h3 class="font-serif text-2xl">Bilgilerimiz</h3>
+
+          <div class="flex items-start gap-4">
+            <div class="text-rose shrink-0 mt-0.5" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs tracking-widest text-rose uppercase mb-1">Telefon</p>
+              <a href="tel:+905376450802" class="text-dark text-sm hover:text-rose transition">0850 346 87 05</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="text-rose shrink-0 mt-0.5" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs tracking-widest text-rose uppercase mb-1">Nişantaşı Şube</p>
+              <p class="text-dark text-sm">19 Mayıs Mah. Hrant Dink Sok. No 108A<br/>Şişli, İstanbul</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="text-rose shrink-0 mt-0.5" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs tracking-widest text-rose uppercase mb-1">Osmanbey Şube</p>
+              <p class="text-dark text-sm">Osmanbey, Şişli, İstanbul</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="text-rose shrink-0 mt-0.5" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-xs tracking-widest text-rose uppercase mb-1">Çalışma Saatleri</p>
+              <p class="text-dark text-sm">Her gün 09:30 – 23:00</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 pt-2 mt-auto">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=41.0587,28.9881"
+              target="_blank"
+              class="flex-1 flex items-center justify-center gap-2 bg-dark text-white text-xs tracking-widest uppercase px-4 py-3 rounded-full hover:bg-rose transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V18.75c0-.414-.336-.75-.75-.75h-3.379a1.125 1.125 0 0 1-1.12-.668l-1.053-2.436M15 12.75V3.375c0-.621-.504-1.125-1.125-1.125h-1.5a1.125 1.125 0 0 0-1.125 1.125V12.75m6 0V6.375a1.125 1.125 0 0 0-1.125-1.125h-1.5a1.125 1.125 0 0 0-1.125 1.125V12.75" />
+              </svg>
+              Yol Tarifi Al
+            </a>
+            <a href="https://wa.me/908503468705"
+              target="_blank"
+              class="flex-1 flex items-center justify-center gap-2 bg-rose text-white text-xs tracking-widest uppercase px-4 py-3 rounded-full hover:bg-dark transition">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="flex flex-col gap-4">
+          <div class="rounded-2xl overflow-hidden shadow-sm">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.0!2d28.9881!3d41.0587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAzJzMxLjMyIk4gMjjCsDU5JzE3LjE2IkU!5e0!3m2!1str!2str!4v1234567890"
+              width="100%"
+              height="425"
+              style="border:0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       APPOINTMENT FORM
+  ════════════════════════════════════════ -->
+  <section id="randevu" class="py-24 bg-cream">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-xs tracking-[0.4em] uppercase text-rose mb-3">Bize Ulaşın</p>
+        <h2 class="text-5xl font-serif font-light">Randevu Oluştur</h2>
+      </div>
+      <div class="bg-white rounded-2xl p-8">
+        <form onsubmit="sendToWhatsApp2(event)" class="flex flex-col gap-4">
+          <input type="text" id="wa-name-2" placeholder="Adınız Soyadınız"
+            class="bg-cream border border-rose/30 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-rose placeholder-muted/50"/>
+          <input type="tel" id="wa-phone-2" placeholder="Telefon Numaranız"
+            class="bg-cream border border-rose/30 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-rose placeholder-muted/50"/>
+          <select id="wa-service-2"
+            class="bg-cream border border-rose/30 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-rose text-muted">
+            <option value="">Hizmet Seçin</option>
+            <option>Manikür</option>
+            <option>Protez Tırnak</option>
+            <option>Spa Manikür / Pedikür</option>
+            <option>İpek Kirpik</option>
+            <option>Kirpik Lifting</option>
+            <option>Kaş Laminasyonu</option>
+            <option>Cilt Bakımı</option>
+            <option>G5 Masajı</option>
+            <option>Kafa Masajı</option>
+          </select>
+          <select id="wa-branch-2"
+            class="bg-cream border border-rose/30 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-rose text-muted">
+            <option value="">Şube Seçin</option>
+            <option>Nişantaşı Şube</option>
+            <option>Osmanbey Şube</option>
+          </select>
+          <textarea id="wa-note-2" placeholder="Notlarınız veya tercih ettiğiniz saat..." rows="3"
+            class="bg-cream border border-rose/30 px-4 py-3 text-sm rounded-xl focus:outline-none focus:border-rose placeholder-muted/50 resize-none"></textarea>
+          <button type="submit"
+            class="bg-rose text-white py-3 text-xs tracking-widest uppercase rounded-full hover:bg-dark transition">
+            WhatsApp ile Gönder
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="bg-dark text-white py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <span class="font-serif text-2xl tracking-widest">Çilek Nail House</span>
+      <p class="text-muted text-sm tracking-widest">© 2026 Çilek Nail House Studio. Tüm hakları saklıdır.</p>
+      <a href="https://wa.me/908503468705" target="_blank"
+         class="text-sm tracking-widest uppercase border border-rose text-rose px-4 py-2 hover:bg-rose hover:text-white transition">
+        WhatsApp'tan Yazın
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toggle script -->
+  <script>
+    // Services toggle
+    function toggleService(id) {
+      const el = document.getElementById(id);
+      const isHidden = el.classList.contains('hidden');
+      ['tirnak', 'kirpik', 'cilt'].forEach(name => {
+        document.getElementById(name).classList.add('hidden');
+      });
+      if (isHidden) el.classList.remove('hidden');
+    }
+
+    // WhatsApp form submit
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+
+      const name    = document.getElementById('wa-name').value.trim();
+      const phone   = document.getElementById('wa-phone').value.trim();
+      const service = document.getElementById('wa-service').value;
+      const branch  = document.getElementById('wa-branch').value;
+      const note    = document.getElementById('wa-note').value.trim();
+
+      if (!name || !phone || !service || !branch) {
+        alert('Lütfen ad, telefon, hizmet ve şube bilgilerini doldurunuz.');
+        return;
+      }
+
+      const message = 
+  `📋 Yeni Randevu Talebi
+
+  👤 Ad Soyad: ${name}
+  📞 Telefon: ${phone}
+  💅 Hizmet: ${service}
+  🏠 Şube: ${branch}
+  🗒️ Not: ${note || '—'}
+
+  _Çilek Nail House web sitesi üzerinden gönderildi._`;
+
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/908503468705?text=${encoded}`, '_blank');
+    }
+
+    function sendToWhatsApp2(e) {
+        e.preventDefault();
+
+        const name    = document.getElementById('wa-name-2').value.trim();
+        const phone   = document.getElementById('wa-phone-2').value.trim();
+        const service = document.getElementById('wa-service-2').value;
+        const branch  = document.getElementById('wa-branch-2').value;
+        const note    = document.getElementById('wa-note-2').value.trim();
+
+        if (!name || !phone || !service || !branch) {
+          alert('Lütfen ad, telefon, hizmet ve şube bilgilerini doldurunuz.');
+          return;
+        }
+
+        const message = 
+    `Yeni Randevu Talebi
+
+    Ad Soyad: ${name}
+    Telefon: ${phone}
+    Hizmet: ${service}
+    Şube: ${branch}
+    Not: ${note || '—'}
+
+    _Çilek Nail House web sitesi üzerinden gönderildi._`;
+
+        const encoded = encodeURIComponent(message);
+        window.open(`https://wa.me/908503468705?text=${encoded}`, '_blank');
+      }
+  </script>
+
+</body> 
+</html>
