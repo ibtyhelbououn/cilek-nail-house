@@ -63,14 +63,37 @@
   <nav class="fixed top-0 left-0 w-full z-50 bg-cream/90 backdrop-blur-sm border-b border-rose/20">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <span class="font-serif text-2xl tracking-widest text-dark">Çilek Nail House</span>
+
+      <!-- Desktop menu -->
       <div class="hidden md:flex gap-8 text-sm tracking-widest text-muted uppercase">
         <a href="#gallery"  class="hover:text-rose transition">Galeri</a>
         <a href="#services" class="hover:text-rose transition">Hizmetler</a>
-        <a href="#yorumlar"    class="hover:text-rose transition">Yorumlar</a>
+        <a href="#yorumlar" class="hover:text-rose transition">Yorumlar</a>
         <a href="#contact"  class="hover:text-rose transition">İletişim</a>
       </div>
+
+      <!-- Desktop button -->
       <a href="https://wa.me/908503468705" target="_blank"
-         class="text-sm tracking-widest uppercase border border-rose text-rose px-4 py-2 hover:bg-rose hover:text-white transition">
+        class="hidden md:block text-sm tracking-widest uppercase border border-rose text-rose px-4 py-2 hover:bg-rose hover:text-white transition">
+        Randevu Al
+      </a>
+
+      <!-- Hamburger button (mobile only) -->
+      <button onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 p-2">
+        <span class="block w-6 h-0.5 bg-dark transition"></span>
+        <span class="block w-6 h-0.5 bg-dark transition"></span>
+        <span class="block w-6 h-0.5 bg-dark transition"></span>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-rose/20 px-6 py-4 flex flex-col gap-4">
+      <a href="#gallery"  onclick="toggleMenu()" class="text-sm tracking-widest text-muted uppercase hover:text-rose transition">Galeri</a>
+      <a href="#services" onclick="toggleMenu()" class="text-sm tracking-widest text-muted uppercase hover:text-rose transition">Hizmetler</a>
+      <a href="#yorumlar" onclick="toggleMenu()" class="text-sm tracking-widest text-muted uppercase hover:text-rose transition">Yorumlar</a>
+      <a href="#contact"  onclick="toggleMenu()" class="text-sm tracking-widest text-muted uppercase hover:text-rose transition">İletişim</a>
+      <a href="https://wa.me/908503468705" target="_blank"
+        class="text-sm tracking-widest uppercase bg-rose text-white px-4 py-2 text-center hover:bg-dark transition">
         Randevu Al
       </a>
     </div>
@@ -623,6 +646,11 @@
         const encoded = encodeURIComponent(message);
         window.open(`https://wa.me/908503468705?text=${encoded}`, '_blank');
       }
+    
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
   </script>
 
 </body> 
